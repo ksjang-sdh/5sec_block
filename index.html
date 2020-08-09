@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <a id="block" href="">5초 블락 실행</a>
+    <p><button style="width: 7rem; height: 3rem;">Button</button></p>
+
+    <script>
+      document.getElementById('block').addEventListener('click', onClick);
+
+      function onClick(event) {
+        setTimeout(function () {
+          sleep(5000);
+          alert('블락 해제');
+        }, 0);
+        return false;
+      }
+
+      function sleep(milliseconds) {
+        var start = Date.now();
+        while (Date.now() - start < milliseconds) {}
+      }
+    </script>
+  </body>
+</html>
